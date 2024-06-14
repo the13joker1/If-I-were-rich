@@ -2,6 +2,7 @@
     --primary-color: #4CAF50;
     --background-color: #FFFFFF;
     --text-color: #000000;
+    --overlay-bg-color: rgba(0, 0, 0, 0.7);
     --link-color: #1a73e8;
     --link-hover-color: #1558b8;
 }
@@ -10,6 +11,7 @@
     :root {
         --background-color: #121212;
         --text-color: #FFFFFF;
+        --overlay-bg-color: rgba(255, 255, 255, 0.7);
         --link-color: #8ab4f8;
         --link-hover-color: #b2cfff;
     }
@@ -47,34 +49,66 @@ main {
     padding: 1rem;
 }
 
-.items-list {
-    list-style: none;
-    padding: 0;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.items-list li {
-    background-color: var(--primary-color);
-    margin: 1rem 0;
-    padding: 1rem;
+.item {
+    position: relative;
+    width: calc(33.333% - 1rem);
+    overflow: hidden;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.items-list li:hover {
-    transform: scale(1.05);
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.items-list a {
-    text-decoration: none;
-    color: var(--text-color);
+.item:hover img {
+    transform: scale(1.1);
 }
 
-.items-list h2 {
-    margin-bottom: 0.5rem;
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--overlay-bg-color);
+    color: #FFFFFF;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.items-list p {
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.overlay p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%;
+    }
 }
 
 footer {
