@@ -4,63 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>If I Were Rich</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+            font-size: 1.2em;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color: #2980b9;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #3498db;
+        }
+        li:hover {
+            transform: translateX(10px);
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+        li:hover img {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>If I Were Rich</h1>
-    </header>
-    <main>
-        <div class="gallery">
-            <div class="item">
-                <a href="https://www.audemarspiguet.com/com/de/watch-collection/royal-oak-concept/26577IO.OO.D002CA.01.html" target="_blank">
-                    <img src="https://www.audemarspiguet.com/content/dam/audemars-piguet-new/2021/09/22/watch/featured-images/APRO-26577IO-OO-D002CA-01-FL-MAIN.jpg" alt="Audemars Piguet Royal Oak Concept">
-                    <div class="overlay">
-                        <h2>Audemars Piguet Royal Oak Concept</h2>
-                        <p>Approx. 300,000 - 400,000 USD</p>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="https://configurator.porsche.com/porsche-code/PS2H86A0" target="_blank">
-                    <img src="https://files.porsche.com/filestore/image/multimedia/none/rd-2019-taycan-modelimage-sideshot/thumbwhite/4b14e8d7-5c6c-11e9-80c4-005056bbdc38;sZt=porsche-86-image.jpg" alt="Porsche Taycan Turbo GT">
-                    <div class="overlay">
-                        <h2>Porsche Taycan Turbo GT</h2>
-                        <p>273,639.44 €</p>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/car-configurator.html/onlinecode/CCci/DE/de/M5L54E2L/?pid=direct_link_entry" target="_blank">
-                    <img src="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/g-class/suv-x166/hero/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.12.20210303150052.jpeg" alt="Mercedes-Benz G 580 with EQ Technology">
-                    <div class="overlay">
-                        <h2>Mercedes-Benz G 580 with EQ Technology</h2>
-                        <p>188,954.15 €</p>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="https://www.marcelremusrealestate.com/immobilien/son-vida-villa-solitaire-einzigartiges-anwesen-in-son-vida-10326/" target="_blank">
-                    <img src="https://www.marcelremusrealestate.com/fileadmin/Marcel_Remus/Premium_Immobilien/Engel_Voelkers_Son_Vida_Mallorca/Premium_Immobilien_Son_Vida_Mallorca_01.jpg" alt="Son Vida Villa Solitaire">
-                    <div class="overlay">
-                        <h2>Son Vida Villa Solitaire</h2>
-                        <p>65,000,000 €</p>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="https://bombardier.com/en/configurator-summary?share_key=d78346e86753750708c14524d888928f#!/summary" target="_blank">
-                    <img src="https://bombardier.com/sites/default/files/2021-11/7500_MAIN_8.jpg" alt="Bombardier Global 7500">
-                    <div class="overlay">
-                        <h2>Bombardier Global 7500</h2>
-                        <p>Approx. 73,000,000 €</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024</p>
-    </footer>
+        <ul>
+            <li>
+                <img src="https://www.audemarspiguet.com/content/dam/audemars-piguet/2022-03/26577IO-OO-D002CA-01_1.jpg" alt="Audemars Piguet Royal Oak Concept">
+                <a href="https://www.audemarspiguet.com/com/de/watch-collection/royal-oak-concept/26577IO.OO.D002CA.01.html" target="_blank">Audemars Piguet Royal Oak Concept (approx. 300,000 - 400,000 USD)</a>
+            </li>
+            <li>
+                <img src="https://files.porsche.com/filestore/image/multimedia/none/jdp-2022-taycan-turbo-gal-01/normal/4d98ac7b-1ef6-11ec-80ef-005056bbdc38;sJ;twebp/porsche-normal.webp" alt="Porsche Taycan Turbo GT">
+                <a href="https://configurator.porsche.com/porsche-code/PS2H86A0" target="_blank">Porsche Taycan Turbo GT (273,639.44 €)</a>
+            </li>
+            <li>
+                <img src="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/g-class/suv-x167/equipment/design-and-equipment-highlights/_jcr_content/par/textimage_1982792027/image.MQ6.12.20201210101402.jpeg" alt="Mercedes-Benz G 580 with EQ Technology">
+                <a href="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/car-configurator.html/onlinecode/CCci/DE/de/M5L54E2L/?pid=direct_link_entry" target="_blank">Mercedes-Benz G 580 with EQ Technology (188,954.15 €)</a>
+            </li>
+            <li>
+                <img src="https://www.marcelremusrealestate.com/immobilien/son-vida-villa-solitaire-einzigartiges-anwesen-in-son-vida-10326/01.jpg" alt="Son Vida Villa Solitaire">
+                <a href="https://www.marcelremusrealestate.com/immobilien/son-vida-villa-solitaire-einzigartiges-anwesen-in-son-vida-10326/" target="_blank">Son Vida Villa Solitaire (65,000,000 €)</a>
+            </li>
+            <li>
+                <img src="https://bombardier.com/sites/default/files/2021-02/global7500_6_3_01.jpg" alt="Bombardier Global 7500">
+                <a href="https://bombardier.com/en/configurator-summary?share_key=d78346e86753750708c14524d888928f#!/summary" target="_blank">Bombardier Global 7500 (approx. 73,000,000 €)</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
