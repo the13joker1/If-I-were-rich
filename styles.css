@@ -2,7 +2,7 @@
     --primary-color: #4CAF50;
     --background-color: #FFFFFF;
     --text-color: #000000;
-    --overlay-bg-color: rgba(0, 0, 0, 0.7);
+    --overlay-bg-color: rgba(0, 0, 0, 0.6);
     --link-color: #1a73e8;
     --link-hover-color: #1558b8;
 }
@@ -11,7 +11,7 @@
     :root {
         --background-color: #121212;
         --text-color: #FFFFFF;
-        --overlay-bg-color: rgba(255, 255, 255, 0.7);
+        --overlay-bg-color: rgba(255, 255, 255, 0.6);
         --link-color: #8ab4f8;
         --link-hover-color: #b2cfff;
     }
@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
@@ -35,33 +35,35 @@ body {
 
 header {
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
     color: #FFFFFF;
+    font-size: 2.5rem;
 }
 
 main {
     flex: 1;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
 }
 
 .item {
     position: relative;
-    width: calc(33.333% - 1rem);
+    width: calc(33.333% - 2rem);
     overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .item img {
@@ -71,8 +73,13 @@ main {
     transition: transform 0.3s ease;
 }
 
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .overlay {
@@ -85,6 +92,7 @@ main {
     padding: 1rem;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-align: center;
 }
 
 .item:hover .overlay {
@@ -99,13 +107,13 @@ main {
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .item {
-        width: calc(50% - 1rem);
+        width: calc(50% - 2rem);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .item {
         width: 100%;
     }
@@ -113,7 +121,8 @@ main {
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--primary-color);
     color: #FFFFFF;
+    font-size: 1rem;
 }
