@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #4CAF50;
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --link-color: #1a73e8;
+    --link-hover-color: #1558b8;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #FFFFFF;
+        --link-color: #8ab4f8;
+        --link-hover-color: #b2cfff;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+}
+
+.items-list li {
+    background-color: var(--primary-color);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.items-list li:hover {
+    transform: scale(1.05);
+}
+
+.items-list a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.items-list h2 {
+    margin-bottom: 0.5rem;
+}
+
+.items-list p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
